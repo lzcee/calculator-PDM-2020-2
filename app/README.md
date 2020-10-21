@@ -1,1 +1,0 @@
-Calculator developed in Android for the subject "Programming for Mobile Devices".
