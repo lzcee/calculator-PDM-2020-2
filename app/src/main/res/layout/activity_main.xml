@@ -26,18 +26,21 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onClick"
             android:text="@string/seven" />
         <Button
             android:id="@+id/eightBt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onClick"
             android:text="@string/eight" />
         <Button
             android:id="@+id/nineBt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onClick"
             android:text="@string/nine" />
     </LinearLayout>
 
@@ -51,18 +54,21 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onClick"
             android:text="@string/four" />
         <Button
             android:id="@+id/fiveBt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onClick"
             android:text="@string/five" />
         <Button
             android:id="@+id/sixBt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onClick"
             android:text="@string/six" />
     </LinearLayout>
 
@@ -76,18 +82,21 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onClick"
             android:text="@string/one" />
         <Button
             android:id="@+id/twoBt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onClick"
             android:text="@string/two" />
         <Button
             android:id="@+id/threeBt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onClick"
             android:text="@string/three" />
     </LinearLayout>
 
@@ -100,6 +109,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="onClick"
             android:text="@string/zero" />
     </LinearLayout>
 
@@ -107,6 +117,7 @@
         android:id="@+id/clearBt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onClick"
         android:text="@string/clear" />
 
 </LinearLayout>
