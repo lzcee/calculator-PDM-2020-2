@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button = (Button)view;
         String textButton = button.getText().toString();
 
-        if (view.getId() == R.id.clearBt) {
-            displayTv.setText("");
-        } else {
-            displayTv.setText(displayTv.getText().toString() + textButton);
-        }
+        displayTv.setText(displayTv.getText().toString() + textButton);
+    }
+
+    public void clearDisplay(View view) {
+        displayTv.setText("");
     }
 }
