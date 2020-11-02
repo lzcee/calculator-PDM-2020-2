@@ -130,9 +130,16 @@
             android:id="@+id/zeroBt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
+            android:layout_weight="2"
             android:onClick="onClick"
             android:text="@string/zero" />
+        <Button
+            android:id="@+id/decimalBt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/decimal" />
         <Button
             android:id="@+id/sumBt"
             android:layout_width="0dp"
@@ -146,7 +153,7 @@
         android:id="@+id/equalBt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onClick"
+        android:onClick="showResult"
         android:text="@string/equal" />
     <Button
         android:id="@+id/clearBt"

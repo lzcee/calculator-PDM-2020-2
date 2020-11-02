@@ -1,14 +1,27 @@
 package com.example.calculadorapdm20202;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import net.objecthunter.exp4j.Expression;
+import net.objecthunter.exp4j.ExpressionBuilder;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView displayTv;
+
+    private String getTextButton(View view) {
+        Button button = (Button) view;
+        return button.getText().toString();
+    }
+
+    private void concatDisplayText(String textButton) {
+        String displayText = displayTv.getText().toString() + textButton;
+        displayTv.setText(displayText);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,13 +33,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        Button button = (Button)view;
-        String textButton = button.getText().toString();
-
-        displayTv.setText(displayTv.getText().toString() + textButton);
+        String textButton = getTextButton(view);
+        concatDisplayText(textButton);
     }
 
     public void clearDisplay(View view) {
         displayTv.setText("");
+    }
+
+    public void showResult(View view) {
+        String expressionText = displayTv.getText().toString();
+        Expression expression = new ExpressionBuilder(expressionText).build();
+
+        try {
+            double result = expression.evaluate();
+            String textResult = "=" + Double.toString(result);
+            concatDisplayText(textResult);
+        } catch (ArithmeticException ex) {
+            String textResult = "=ERRO";
+            concatDisplayText(textResult);
+        }
     }
 }

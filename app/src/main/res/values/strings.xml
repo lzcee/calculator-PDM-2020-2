@@ -16,4 +16,5 @@
     <string name="minus">-</string>
     <string name="sum">+</string>
     <string name="equal">=</string>
+    <string name="decimal">.</string>
 </resources>
