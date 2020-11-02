@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import net.objecthunter.exp4j.Expression;
@@ -12,6 +13,7 @@ import net.objecthunter.exp4j.ExpressionBuilder;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView displayTv;
+    private final String DISPLAY_TV_VALUE = "DISPLAY_TV_VALUE";
 
     private String getTextButton(View view) {
         Button button = (Button) view;
@@ -29,6 +31,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         displayTv = findViewById(R.id.displayTv);
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(DISPLAY_TV_VALUE, displayTv.getText().toString());
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        displayTv.setText(savedInstanceState.getString(DISPLAY_TV_VALUE, ""));
     }
 
     @Override
