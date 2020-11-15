@@ -1,1 +1,1 @@
-Calculator developed in Java for Android for the Mobile Device Development course.
+Calculator developed in Java and Kotlin for Android for the Mobile Device Development course.
