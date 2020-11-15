@@ -149,12 +149,34 @@
             android:text="@string/sum" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/equalBt"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="showResult"
-        android:text="@string/equal" />
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/squareRootBt"
+            android:onClick="onClick"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="√" />
+        <Button
+            android:id="@+id/exponentialBt"
+            android:onClick="onClick"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="^" />
+        <Button
+            android:id="@+id/equalBt"
+            android:onClick="showResult"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/equal" />
+    </LinearLayout>
     <Button
         android:id="@+id/clearBt"
         android:layout_width="match_parent"

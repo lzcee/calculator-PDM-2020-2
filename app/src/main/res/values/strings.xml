@@ -17,4 +17,10 @@
     <string name="sum">+</string>
     <string name="equal">=</string>
     <string name="decimal">.</string>
+    <string name="settings">Configurações</string>
+    <string name="exit">Sair</string>
+    <string name="calculator_type">Tipo de Calculadora</string>
+    <string name="advanced">Avançada</string>
+    <string name="basic">Básica</string>
+    <string name="save">Salvar</string>
 </resources>
