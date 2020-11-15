@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void showResult(View view) {
         String expressionText = displayTv.getText().toString();
+        expressionText = expressionText.replace("√","sqrt");
         Expression expression = new ExpressionBuilder(expressionText).build();
 
         try {
